@@ -167,7 +167,7 @@ function Field({ label, name, type = "text", required, placeholder, error }: { l
         name={name}
         type={type}
         placeholder={placeholder}
-        className="mt-3 w-full border-b border-border bg-transparent py-3 outline-none placeholder:text-muted-foreground/60 focus:border-foreground"
+        className="mt-3 w-full border-b border-border bg-transparent py-3 outline-none placeholder:text-muted-foreground focus:border-foreground"
       />
       {error && <p className="mt-2 text-xs text-destructive">{error}</p>}
     </div>

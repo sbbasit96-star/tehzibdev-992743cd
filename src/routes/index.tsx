@@ -152,7 +152,7 @@ function Home() {
               { t: "SEO-Ready Builds", d: "Structured, semantic, discoverable from day one." },
             ].map((s, i) => (
               <div key={s.t} className="group relative bg-[color:var(--ink)] p-8 transition hover:bg-[color:var(--charcoal)]">
-                <span className="eyebrow" style={{ color: "rgba(245,245,245,0.4)" }}>{String(i + 1).padStart(2, "0")}</span>
+                <span className="eyebrow" style={{ color: "rgba(245,245,245,0.75)" }}>{String(i + 1).padStart(2, "0")}</span>
                 <h3 className="mt-4 text-2xl">{s.t}</h3>
                 <p className="mt-3 text-sm leading-relaxed opacity-70">{s.d}</p>
                 <span className="mt-6 inline-block h-px w-0 bg-[color:var(--gold)] transition-all duration-500 group-hover:w-10" />
