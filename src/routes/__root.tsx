@@ -131,7 +131,6 @@ function RootComponent() {
   const { queryClient } = Route.useRouteContext();
   return (
     <QueryClientProvider client={queryClient}>
-      <IntroOverlay />
       <div className="flex min-h-screen flex-col">
         <SiteNav />
         <main className="flex-1">
