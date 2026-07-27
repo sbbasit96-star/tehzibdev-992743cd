@@ -3,6 +3,7 @@ import { ArrowUpRight, ArrowRight } from "lucide-react";
 import { SectionHeader } from "@/components/site/section-header";
 import { AmbientField } from "@/components/site/ambient-field";
 import { ProjectVisual } from "@/components/site/project-visual";
+import { IntroOverlay } from "@/components/site/intro-overlay";
 import { PROJECTS } from "@/data/projects";
 
 export const Route = createFileRoute("/")({
@@ -45,6 +46,7 @@ function Home() {
   const featured = PROJECTS.slice(0, 4);
   return (
     <>
+      <IntroOverlay />
       {/* HERO */}
       <section className="relative overflow-hidden">
         <AmbientField />

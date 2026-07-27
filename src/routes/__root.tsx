@@ -13,7 +13,6 @@ import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { SiteNav } from "@/components/site/site-nav";
 import { SiteFooter } from "@/components/site/site-footer";
-import { IntroOverlay } from "@/components/site/intro-overlay";
 
 function NotFoundComponent() {
   return (
@@ -132,7 +131,6 @@ function RootComponent() {
   const { queryClient } = Route.useRouteContext();
   return (
     <QueryClientProvider client={queryClient}>
-      <IntroOverlay />
       <div className="flex min-h-screen flex-col">
         <SiteNav />
         <main className="flex-1">
