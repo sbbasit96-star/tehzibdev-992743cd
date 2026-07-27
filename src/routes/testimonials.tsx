@@ -8,7 +8,9 @@ export const Route = createFileRoute("/testimonials")({
       { name: "description", content: "Words from the people I've worked with. Real quotes only — placeholders until projects go live." },
       { property: "og:title", content: "Testimonials — TehzibDev" },
       { property: "og:description", content: "Honest testimonial page — no fabricated praise." },
+      { property: "og:url", content: "https://tehzibdev.lovable.app/testimonials" },
     ],
+    links: [{ rel: "canonical", href: "https://tehzibdev.lovable.app/testimonials" }],
   }),
   component: Testimonials,
 });

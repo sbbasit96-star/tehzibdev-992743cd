@@ -1,10 +1,16 @@
 import { createFileRoute } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/terms")({
-  head: () => ({ meta: [
-    { title: "Terms & Conditions — TehzibDev" },
-    { name: "description", content: "The terms that apply to using the TehzibDev website and engaging TehzibDev for services." },
-  ]}),
+  head: () => ({
+    meta: [
+      { title: "Terms & Conditions — TehzibDev" },
+      { name: "description", content: "The terms that apply to using the TehzibDev website and engaging TehzibDev for services." },
+      { property: "og:title", content: "Terms & Conditions — TehzibDev" },
+      { property: "og:description", content: "Terms for using the TehzibDev website and engaging the studio for work." },
+      { property: "og:url", content: "https://tehzibdev.lovable.app/terms" },
+    ],
+    links: [{ rel: "canonical", href: "https://tehzibdev.lovable.app/terms" }],
+  }),
   component: Terms,
 });
 

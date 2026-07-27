@@ -10,7 +10,9 @@ export const Route = createFileRoute("/contact")({
       { name: "description", content: "Start a project with TehzibDev. Share your goals, timeline, and budget — get a response within 24 hours." },
       { property: "og:title", content: "Contact TehzibDev" },
       { property: "og:description", content: "Kick off a project or ask a question. Direct email included." },
+      { property: "og:url", content: "https://tehzibdev.lovable.app/contact" },
     ],
+    links: [{ rel: "canonical", href: "https://tehzibdev.lovable.app/contact" }],
   }),
   component: Contact,
 });

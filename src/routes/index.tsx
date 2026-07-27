@@ -8,11 +8,13 @@ import { PROJECTS } from "@/data/projects";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "TehzibDev — Websites that make businesses impossible to ignore" },
+      { title: "TehzibDev — Websites impossible to ignore" },
       { name: "description", content: "Independent web studio building premium, editorial websites for local businesses, professionals, and ambitious startups." },
-      { property: "og:title", content: "TehzibDev — Premium Web Development Studio" },
-      { property: "og:description", content: "Websites built for conversion, credibility, and clarity." },
+      { property: "og:title", content: "TehzibDev — Websites impossible to ignore" },
+      { property: "og:description", content: "Editorial, conversion-first websites built by an independent studio." },
+      { property: "og:url", content: "https://tehzibdev.lovable.app/" },
     ],
+    links: [{ rel: "canonical", href: "https://tehzibdev.lovable.app/" }],
   }),
   component: Home,
 });

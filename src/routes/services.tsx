@@ -3,6 +3,8 @@ import { SectionHeader } from "@/components/site/section-header";
 import { AmbientField } from "@/components/site/ambient-field";
 import { ArrowUpRight } from "lucide-react";
 
+const SERVICE_NAMES = ["Business Websites","Portfolio Websites","Landing Pages","E-commerce Websites","Website Redesign","Responsive Development","Performance Optimization","SEO-Friendly Development"];
+
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
@@ -10,7 +12,22 @@ export const Route = createFileRoute("/services")({
       { name: "description", content: "Business websites, portfolios, landing pages, e-commerce, redesigns, and performance work — built to grow your business." },
       { property: "og:title", content: "Services — TehzibDev" },
       { property: "og:description", content: "Websites and web experiences built for conversion, credibility, and speed." },
+      { property: "og:url", content: "https://tehzibdev.lovable.app/services" },
     ],
+    links: [{ rel: "canonical", href: "https://tehzibdev.lovable.app/services" }],
+    scripts: [{
+      type: "application/ld+json",
+      children: JSON.stringify({
+        "@context": "https://schema.org",
+        "@graph": SERVICE_NAMES.map((name) => ({
+          "@type": "Service",
+          name,
+          provider: { "@id": "https://tehzibdev.lovable.app/#organization" },
+          areaServed: "Worldwide",
+          url: "https://tehzibdev.lovable.app/services",
+        })),
+      }),
+    }],
   }),
   component: Services,
 });

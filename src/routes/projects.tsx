@@ -8,7 +8,11 @@ export const Route = createFileRoute("/projects")({
     meta: [
       { title: "Projects — TehzibDev" },
       { name: "description", content: "An index of every project — a chronological, no-frills list of what I've built." },
+      { property: "og:title", content: "Projects Index — TehzibDev" },
+      { property: "og:description", content: "Chronological index of every shipped and concept project." },
+      { property: "og:url", content: "https://tehzibdev.lovable.app/projects" },
     ],
+    links: [{ rel: "canonical", href: "https://tehzibdev.lovable.app/projects" }],
   }),
   component: Projects,
 });
