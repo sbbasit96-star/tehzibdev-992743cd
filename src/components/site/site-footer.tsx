@@ -7,7 +7,7 @@ export function SiteFooter() {
       <div className="container-editorial py-20">
         <div className="grid gap-16 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
           <div>
-            <p className="eyebrow" style={{ color: "rgba(245,245,245,0.5)" }}>Studio</p>
+            <p className="eyebrow" style={{ color: "rgba(245,245,245,0.8)" }}>Studio</p>
             <h2 className="mt-4 text-balance-tight text-4xl md:text-5xl">
               Have a project in mind?
               <br />
@@ -34,9 +34,9 @@ export function SiteFooter() {
             { to: "/terms", label: "Terms" },
           ]} />
           <div className="space-y-3 text-sm opacity-80">
-            <p className="eyebrow" style={{ color: "rgba(245,245,245,0.5)" }}>Contact</p>
+            <p className="eyebrow" style={{ color: "rgba(245,245,245,0.8)" }}>Contact</p>
             <a href="mailto:hello@tehzibdev.com" className="block hover:text-white">hello@tehzibdev.com</a>
-            <p className="opacity-60">Working remotely worldwide.</p>
+            <p className="opacity-80">Working remotely worldwide.</p>
             <div className="flex gap-4 pt-3 text-xs uppercase tracking-widest">
               <a href="#" className="hover:text-white">Twitter</a>
               <a href="#" className="hover:text-white">GitHub</a>
@@ -45,7 +45,7 @@ export function SiteFooter() {
           </div>
         </div>
 
-        <div className="mt-16 flex flex-col items-start justify-between gap-4 border-t border-white/10 pt-8 text-xs opacity-60 md:flex-row md:items-center">
+        <div className="mt-16 flex flex-col items-start justify-between gap-4 border-t border-white/10 pt-8 text-xs opacity-80 md:flex-row md:items-center">
           <p>© {new Date().getFullYear()} TehzibDev. All rights reserved.</p>
           <p>Designed & built with care in Karachi & the cloud.</p>
         </div>
@@ -57,7 +57,7 @@ export function SiteFooter() {
 function FooterCol({ title, links }: { title: string; links: { to: string; label: string }[] }) {
   return (
     <div>
-      <p className="eyebrow" style={{ color: "rgba(245,245,245,0.5)" }}>{title}</p>
+      <p className="eyebrow" style={{ color: "rgba(245,245,245,0.8)" }}>{title}</p>
       <ul className="mt-4 space-y-2 text-sm">
         {links.map((l) => (
           <li key={l.to}>

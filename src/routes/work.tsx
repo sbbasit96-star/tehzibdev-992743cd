@@ -12,7 +12,9 @@ export const Route = createFileRoute("/work")({
       { name: "description", content: "Selected projects and case studies — a mix of live builds and demonstration work across business, professional, e-commerce, and landing pages." },
       { property: "og:title", content: "Work — TehzibDev" },
       { property: "og:description", content: "Editorial case studies across business, portfolio, landing, and e-commerce projects." },
+      { property: "og:url", content: "https://tehzibdev.lovable.app/work" },
     ],
+    links: [{ rel: "canonical", href: "https://tehzibdev.lovable.app/work" }],
   }),
   component: Work,
 });

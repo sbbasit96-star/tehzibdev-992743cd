@@ -1,0 +1,20 @@
+# TehzibDev
+
+> Independent web studio building premium, editorial websites for local businesses, professionals, and ambitious startups — focused on conversion, credibility, and performance.
+
+TehzibDev is a one-person practice run by Tehzib. Engagements cover strategy, editorial design, frontend engineering, performance, and SEO foundations. Clients work directly with the person designing and building their site.
+
+## Pages
+
+- [Home](/): Studio overview, capabilities, featured work, and process.
+- [About](/about): The person, principles, and process behind the studio.
+- [Services](/services): Business sites, portfolios, landing pages, e-commerce, redesigns, performance, and SEO builds.
+- [Work](/work): Selected case studies and concept projects with filters by category.
+- [Projects](/projects): Chronological index of every project.
+- [Testimonials](/testimonials): Reserved slots for verified client quotes.
+- [Contact](/contact): Start a project — includes direct email.
+
+## Optional
+
+- [Privacy Policy](/privacy): How personal data is handled.
+- [Terms & Conditions](/terms): Terms for using the website.

@@ -65,12 +65,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "TehzibDev — Websites that make businesses impossible to ignore" },
-      { name: "description", content: "TehzibDev is an independent web studio designing and building premium websites for local businesses, professionals, and ambitious startups." },
+      { title: "TehzibDev — Independent Web Studio" },
+      { name: "description", content: "Independent web studio designing and building premium websites for businesses that refuse to blend in." },
       { name: "author", content: "TehzibDev" },
       { name: "theme-color", content: "#0B0B0B" },
-      { property: "og:title", content: "TehzibDev — Premium Web Development Studio" },
-      { property: "og:description", content: "Editorial websites built for conversion, credibility, and clarity." },
+      { property: "og:site_name", content: "TehzibDev" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:site", content: "@tehzibdev" },
@@ -81,6 +80,32 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@300;400;500;600;700&display=swap" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              "@id": "https://tehzibdev.lovable.app/#organization",
+              name: "TehzibDev",
+              url: "https://tehzibdev.lovable.app",
+              email: "hello@tehzibdev.com",
+              founder: { "@type": "Person", name: "Tehzib" },
+              areaServed: "Worldwide",
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://tehzibdev.lovable.app/#website",
+              url: "https://tehzibdev.lovable.app",
+              name: "TehzibDev",
+              publisher: { "@id": "https://tehzibdev.lovable.app/#organization" },
+            },
+          ],
+        }),
+      },
     ],
   }),
   shellComponent: RootShell,

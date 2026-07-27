@@ -10,7 +10,9 @@ export const Route = createFileRoute("/contact")({
       { name: "description", content: "Start a project with TehzibDev. Share your goals, timeline, and budget — get a response within 24 hours." },
       { property: "og:title", content: "Contact TehzibDev" },
       { property: "og:description", content: "Kick off a project or ask a question. Direct email included." },
+      { property: "og:url", content: "https://tehzibdev.lovable.app/contact" },
     ],
+    links: [{ rel: "canonical", href: "https://tehzibdev.lovable.app/contact" }],
   }),
   component: Contact,
 });
@@ -165,7 +167,7 @@ function Field({ label, name, type = "text", required, placeholder, error }: { l
         name={name}
         type={type}
         placeholder={placeholder}
-        className="mt-3 w-full border-b border-border bg-transparent py-3 outline-none placeholder:text-muted-foreground/60 focus:border-foreground"
+        className="mt-3 w-full border-b border-border bg-transparent py-3 outline-none placeholder:text-muted-foreground focus:border-foreground"
       />
       {error && <p className="mt-2 text-xs text-destructive">{error}</p>}
     </div>

@@ -10,7 +10,9 @@ export const Route = createFileRoute("/about")({
       { name: "description", content: "The person, principles, and process behind TehzibDev — an independent editorial web studio." },
       { property: "og:title", content: "About TehzibDev" },
       { property: "og:description", content: "Independent developer building premium websites for businesses that refuse to blend in." },
+      { property: "og:url", content: "https://tehzibdev.lovable.app/about" },
     ],
+    links: [{ rel: "canonical", href: "https://tehzibdev.lovable.app/about" }],
   }),
   component: About,
 });

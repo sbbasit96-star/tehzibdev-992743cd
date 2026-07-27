@@ -1,11 +1,17 @@
 import { createFileRoute } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/privacy")({
-  head: () => ({ meta: [
-    { title: "Privacy Policy — TehzibDev" },
-    { name: "description", content: "How TehzibDev handles personal data submitted via the contact form and website." },
-    { name: "robots", content: "index, follow" },
-  ]}),
+  head: () => ({
+    meta: [
+      { title: "Privacy Policy — TehzibDev" },
+      { name: "description", content: "How TehzibDev handles personal data submitted via the contact form and website." },
+      { name: "robots", content: "index, follow" },
+      { property: "og:title", content: "Privacy Policy — TehzibDev" },
+      { property: "og:description", content: "How TehzibDev handles personal data collected through this website." },
+      { property: "og:url", content: "https://tehzibdev.lovable.app/privacy" },
+    ],
+    links: [{ rel: "canonical", href: "https://tehzibdev.lovable.app/privacy" }],
+  }),
   component: Privacy,
 });
 

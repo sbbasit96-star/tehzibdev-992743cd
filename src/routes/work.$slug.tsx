@@ -4,8 +4,9 @@ import { PROJECTS } from "@/data/projects";
 import { ProjectVisual } from "@/components/site/project-visual";
 
 export const Route = createFileRoute("/work/$slug")({
-  head: ({ loaderData }) => {
+  head: ({ params, loaderData }) => {
     const p = loaderData as (typeof PROJECTS)[number] | undefined;
+    const url = `https://tehzibdev.lovable.app/work/${params.slug}`;
     if (!p) return { meta: [{ title: "Case study — TehzibDev" }, { name: "robots", content: "noindex" }] };
     return {
       meta: [
@@ -13,7 +14,25 @@ export const Route = createFileRoute("/work/$slug")({
         { name: "description", content: p.short },
         { property: "og:title", content: `${p.name} — TehzibDev` },
         { property: "og:description", content: p.short },
+        { property: "og:type", content: "article" },
+        { property: "og:url", content: url },
       ],
+      links: [{ rel: "canonical", href: url }],
+      scripts: [{
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "CreativeWork",
+          name: p.name,
+          headline: p.name,
+          description: p.short,
+          url,
+          author: { "@id": "https://tehzibdev.lovable.app/#organization" },
+          creator: { "@id": "https://tehzibdev.lovable.app/#organization" },
+          genre: p.category,
+          dateCreated: String(p.year),
+        }),
+      }],
     };
   },
   loader: ({ params }) => {
