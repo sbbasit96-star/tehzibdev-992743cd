@@ -46,6 +46,7 @@ function Home() {
   const featured = PROJECTS.slice(0, 4);
   return (
     <>
+      <IntroOverlay />
       {/* HERO */}
       <section className="relative overflow-hidden">
         <AmbientField />
